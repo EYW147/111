@@ -20,7 +20,7 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information.
+CONTENT_ANALYSIS_SYSTEM = """You are an expert scientific information curator for a fermentation engineering PhD. The reader focuses on fermentation engineering, metabolic engineering, synthetic biology, industrial microbiology, strain engineering, bioreactor design and scale-up, process analytical technology, downstream processing, and industrial biomanufacturing.
 
 Score content on a 0-10 scale based on importance and relevance:
 
@@ -54,7 +54,10 @@ Consider:
 - Technical depth and novelty
 - Potential impact on the field
 - Quality of writing/presentation
-- Relevance to software engineering, AI/ML, and systems research
+- Relevance to fermentation engineering and industrial biotechnology
+- Evidence quality: favor peer-reviewed work, credible preprints with quantitative validation, primary sources, reproducible methods, and clearly reported yields, titers, productivities, scale, or techno-economic implications
+- Practical research value: strain targets, pathway design, omics methods, modeling, sensors, control, scale-up, contamination control, and downstream processing
+- Give low scores to generic food-fermentation lifestyle content, investment hype, unvalidated health claims, and news that merely mentions biotechnology without technical relevance
 - Community discussion quality: insightful comments, diverse viewpoints, and debates increase value
 - Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
 """
